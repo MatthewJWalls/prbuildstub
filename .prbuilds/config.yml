@@ -4,4 +4,10 @@ teardown:
   ansible: .prbuilds/cleanup.playbook.yml
 checks:
   loadtest:
-      url: http://localhost:3000
+    url: http://localhost:3000/
+  microdata:
+    endpoints:
+      - url: http://localhost:3000/
+        expected:
+          - WebPage
+          - LiveBloke
