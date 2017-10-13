@@ -9,3 +9,4 @@ checks:
         expected:
           - WebPage
           - LiveBloke
+      - url: http://localhost:3000/
