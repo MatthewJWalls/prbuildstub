@@ -10,7 +10,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update
 sudo apt-get install -y yarn
 
-sudo apt-get install node
+sudo apt-get install -y nodejs
 
 # run the project
 
