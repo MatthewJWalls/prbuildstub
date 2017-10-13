@@ -3,8 +3,6 @@ setup:
 teardown:
   ansible: .prbuilds/cleanup.playbook.yml
 checks:
-  loadtest:
-    url: http://localhost:3000/
   microdata:
     endpoints:
       - url: http://localhost:3000/
