@@ -4,9 +4,14 @@
     AWS_PROFILE: frontend
     ANSIBLE_HOST_KEY_CHECKING: False
   tasks:
+
+    - name: install app
+      command: ~/workspace/install.sh
+      args:
+        chdir: ~/workspace/
     
-    - name: install and run the project
-      command: screen -S trousers-build -d -m ~/workspace/install.sh
+    - name: run the app
+      command: screen -S trousers-build -d -m yarn start
       args:
         chdir: ~/workspace
     
