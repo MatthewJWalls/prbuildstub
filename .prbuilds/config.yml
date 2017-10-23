@@ -3,10 +3,5 @@ setup:
 teardown:
   ansible: .prbuilds/cleanup.playbook.yml
 checks:
-  microdata:
-    endpoints:
-      - url: http://localhost:3000/
-        expected:
-          - WebPage
-          - LiveBloke
-      - url: http://localhost:3000/
+  a11yvalidation:
+    dummy: dummy
