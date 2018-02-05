@@ -3,5 +3,5 @@ setup:
 teardown:
   ansible: .prbuilds/cleanup.playbook.yml
 checks:
-  a11yvalidation:
-    dummy: dummy
+  lighthouse:
+    url: https://theguardian.com
