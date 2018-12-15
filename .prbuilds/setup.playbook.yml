@@ -6,9 +6,9 @@
   tasks:
     
     - name: install and run the project
-      command: screen -S trousers-build -d -m ~/workspace/prbuildstub/install.sh
+      command: screen -S trousers-build -d -m  {{ workspace }}/install.sh
       args:
-        chdir: ~/workspace/prbuildstub
+        chdir: {{ workspace }}
     
     - name: wait for the application to become available
       wait_for:
