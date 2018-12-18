@@ -1,18 +1,16 @@
 #!/bin/bash
 
-sudo apt-get install -y apt-transport-https
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
 
-# install yarn
+if [[ "$machine" == "Mac" ]]; then
+    bin/prbuildstub-osx
+fi
 
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
-sudo apt-get update
-sudo apt-get install -y yarn
-
-sudo apt-get install node
-
-# run the project
-
-yarn
-yarn start
+if [[ "$machine" == "Linux" ]]; then
+    bin/prbuildstub-linux
+fi
