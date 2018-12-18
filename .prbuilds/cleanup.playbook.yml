@@ -3,3 +3,10 @@
   tasks:
     - name: kill the application
       command: screen -S trousers-build -X quit
+
+    - name: wait for the port to no longer be open
+      wait_for:
+        port: 3000
+        state: stopped
+        delay: 7
+      
