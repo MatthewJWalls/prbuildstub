@@ -9,8 +9,10 @@ esac
 
 if [[ "$machine" == "Mac" ]]; then
     bin/prbuildstub-osx
+    exit $?
 fi
 
 if [[ "$machine" == "Linux" ]]; then
     bin/prbuildstub-linux
+    exit $?
 fi
