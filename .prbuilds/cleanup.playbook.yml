@@ -4,6 +4,9 @@
     - name: kill the application
       command: screen -S trousers-build -X quit
 
+    - name: doubleshot
+      shell: lsof -nP -i4TCP:3000 | grep -v PID | awk '{print $2}' | xargs kill
+      
     - name: wait for the port to no longer be open
       wait_for:
         port: 3000
