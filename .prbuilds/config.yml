@@ -3,5 +3,5 @@ setup:
 teardown:
   ansible: .prbuilds/cleanup.playbook.yml
 checks:
-  lighthouse:
+  selftest:
       url: http://localhost:3000/
