@@ -3,5 +3,5 @@ setup:
 teardown:
   ansible: .prbuilds/cleanup.playbook.yml
 checks:
-  selftest:
+  amp:
       url: http://localhost:3000/
