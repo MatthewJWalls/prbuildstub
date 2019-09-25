@@ -4,4 +4,7 @@ teardown:
   ansible: .prbuilds/cleanup.playbook.yml
 checks:
   amp:
-      url: http://localhost:3000/
+    url: http://localhost:3000/
+  lighthouse:
+    url: http://localhost:3000/
+  
